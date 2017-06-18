@@ -1,0 +1,15 @@
+class JEntry:
+    def __init__(self):
+        self.hostname = ""
+        self.user_id = ""
+        self.username = ""
+        self.session_id = ""
+        self.pid = ""
+        self.leader = ""
+        self.syslog_identifier = ""
+        self.message = ""
+        self.source_timestamp = ""
+        self.timestamp = ""
+        self.cursor = ""
+        self.notification_type = ""
+        self.friendly_message = ""

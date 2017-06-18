@@ -1,0 +1,52 @@
+app:
+  version: '0.0.1'
+  hostname: '<HOSTNAME-HERE>' # omsdev
+slack:
+  token: '<SLACK-TOKEN-HERE>' # xoxb-15....
+  webhook-url: '<SLACK-WEBHOOK-URL-HERE>' # https://hooks.slack.com/services/T32...
+  bot-name: '<SLACK-BOT-NAME-HERE>' # bob
+  channel-name: '<SLACK-CHANNEL-HERE>' # general
+worker:
+  seconds-sleep-on-error: 3
+  target: {
+    sudo: true,
+    sshd: true
+  }
+  match: [
+    invalid-user: {
+      is-active: true,
+      name: 'Invalid User',
+      pattern: 'Invalid user\s+(\w+)\s+from\s+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})',
+      is-keyword: false
+    },
+    accepted-password: {
+      is-active: true,
+      name: 'Accepted Password',
+      pattern: 'Accepted password for\s+(\w+)\s+from\s+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s+port\s+([0-9]+)',
+      is-keyword: false
+    },
+    session-closed: {
+      is-active: true,
+      name: 'Session Closed',
+      pattern: 'session closed for user\s+(\w+)',
+      is-keyword: false
+    },
+    authentication-failure: {
+      is-active: true,
+      name: 'Authentication Failure',
+      pattern: '.*rhost=(\d{0,3}\.\d{0,3}\.\d{0,3}\.\d{0,3})\s+user=(\w+)',
+      is-keyword: false
+    },
+    altibase: {
+      is-active: true,
+      name: 'Altibase',
+      pattern: 'altibase',
+      is-keyword: true
+    },
+    timesten: {
+      is-active: true,
+      name: 'TimesTen',
+      pattern: 'timesten',
+      is-keyword: true
+    }
+  ]
