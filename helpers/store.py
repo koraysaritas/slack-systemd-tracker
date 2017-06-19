@@ -1,7 +1,6 @@
 class Store:
     def __init__(self, config):
         self.version = config["app"]["version"]
-        self.hostname = config["app"]["hostname"]
         self.verbose = False
 
 

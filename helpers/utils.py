@@ -6,6 +6,10 @@ from pathlib import Path
 import yaml
 
 
+def time_to_str(a_time):
+    return a_time.strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
+
+
 def convert_timestamp(s):
     return datetime.datetime.fromtimestamp(int(s) / 1000000)
 

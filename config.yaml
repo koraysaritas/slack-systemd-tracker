@@ -1,6 +1,5 @@
 app:
   version: '0.0.1'
-  hostname: '<HOSTNAME-HERE>' # omsdev
 slack:
   token: '<SLACK-TOKEN-HERE>' # xoxb-15....
   webhook-url: '<SLACK-WEBHOOK-URL-HERE>' # https://hooks.slack.com/services/T32...
