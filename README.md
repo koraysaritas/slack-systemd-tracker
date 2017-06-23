@@ -39,10 +39,22 @@ You need to define the following parameters in the ``config.yaml`` file:
 ## Screenshots
 
 ###### sudo commands
-![01](https://github.com/koraysaritas/slack-systemd-tracker/blob/master/screenshots/d1_small.png)
+<img
+  src="/screenshots/d1.png"
+  alt="sudo commands"
+  width="750"
+/>
 
 ###### login failed
-![03](https://github.com/koraysaritas/slack-systemd-tracker/blob/master/screenshots/d2_small.PNG)
+<img
+  src="/screenshots/d2.png"
+  alt="login failed"
+  width="750"
+/>
 
 ###### login
-![02](https://github.com/koraysaritas/slack-systemd-tracker/blob/master/screenshots/d3_small.png)
+<img
+  src="/screenshots/d3.png"
+  alt="login"
+  width="750"
+/>
